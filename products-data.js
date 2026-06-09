@@ -375,7 +375,7 @@ window.PRODUCTS = [
     id: 39, brand: "cartier", category: "Moissanite Cartier Santos",
     title: "Test Payment — $1 Demo Item",
     price: "$1.00",
-    whopPlanId: "prod_5wnBzzBiEzC5A",
+    whopPlanId: "plan_4SgcK8FoZXm0q",
     image: "/images/1.png",
     images: ["/images/1.png"],
     description: "Test item for payment verification. Do not purchase."
