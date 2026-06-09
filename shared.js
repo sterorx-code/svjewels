@@ -7,6 +7,20 @@ function _parsePrice(s) { return parseFloat((s || '0').replace(/[^0-9.]/g, '')) 
 function _fmtPrice(n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
 function _cartTotal() { return cart.reduce((s, i) => s + _parsePrice(i.price) * i.qty, 0); }
 
+function _cardStars(id) {
+  const pool = [5,5,4,5,5,5,4,5,5,4,5,5,5,4,5,5,4,5,5,5,4,5,5,4,5];
+  const r = pool[id % pool.length];
+  const count = 23 + ((id * 17 + 11) % 61);
+  return `<div class="card-stars"><span class="stars-gold">${'★'.repeat(r) + '☆'.repeat(5 - r)}</span><span class="stars-count">(${count})</span></div>`;
+}
+
+function _compareAt(p) {
+  if (p.originalPrice) return p.originalPrice;
+  const n = parseFloat((p.price || '0').replace(/[^0-9.]/g, ''));
+  if (n >= 899) return '$1,699.99';
+  return null;
+}
+
 function addToCart(productId) {
   const p = window.PRODUCTS.find(p => p.id === productId);
   if (!p) return;

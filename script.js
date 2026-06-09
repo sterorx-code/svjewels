@@ -8,8 +8,9 @@ function cardHTML(p, num) {
     ? `<img src="${p.image}" alt="${p.title}" loading="lazy">`
     : `<span style="color:var(--gold);font-size:2rem">◆</span>`;
   const saleBadge = p.sale ? `<span class="card-sale-badge">Flash Sale</span>` : '';
-  const priceHTML = p.sale && p.originalPrice
-    ? `<span class="card-price">${p.price}</span><span class="card-price-original">${p.originalPrice}</span>`
+  const compareAt = _compareAt(p);
+  const priceHTML = compareAt
+    ? `<span class="card-price">${p.price}</span><span class="card-price-original">${compareAt}</span>`
     : `<span class="card-price">${p.price}</span>`;
   return `
     <div class="product-card${p.featured ? ' product-card--featured' : ''}">
@@ -18,6 +19,7 @@ function cardHTML(p, num) {
       </a>
       <div class="card-body">
         <p class="card-cat">${p.category}</p>
+        ${_cardStars(p.id)}
         <a class="card-title-link" href="/product/${p.id}"><h3 class="card-title">${p.title}</h3></a>
         <p class="card-desc">${p.description}</p>
         <div class="card-foot">
