@@ -9,6 +9,15 @@
     gtag('js', new Date());
     gtag('config', 'AW-17672408280');
   </script>
+  <!-- Event snippet for Purchase conversion page -->
+  <script>
+    if (new URLSearchParams(window.location.search).get('status') === 'paid') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17672408280/I3WcCL_OiLwcENiZ7upB',
+        'transaction_id': ''
+      });
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -76,10 +85,6 @@
       const isSuccess = status === 'success' || status === 'complete' || status === 'paid';
 
       if (isSuccess) {
-        // Fire Google Ads purchase conversion
-        if (typeof gtag === 'function') {
-          gtag('event', 'conversion', { send_to: 'AW-17672408280' });
-        }
         inner.innerHTML = `
           <span class="oc-gem">◆</span>
           <h1 class="oc-title">Payment Confirmed</h1>
