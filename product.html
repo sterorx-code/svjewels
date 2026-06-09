@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title, description, canonical and OG tags are set dynamically by product.js -->
+  <title>SV Jewels — Moissanite Watch</title>
+  <meta name="description" content="Premium moissanite iced-out watch from SV Jewels. VVS brilliance, free worldwide shipping.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SV Jewels">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="https://sc04.alicdn.com/kf/A8a62767f64824e94b5a9ad77dec2e87az.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="https://sc04.alicdn.com/kf/A8a62767f64824e94b5a9ad77dec2e87az.jpeg">
+
+  <!-- Open Graph (overridden by product.js) -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="SV Jewels">
+  <meta property="og:title" content="SV Jewels — Moissanite Watch">
+  <meta property="og:description" content="Premium moissanite iced-out watch. VVS brilliance, free shipping.">
+  <meta property="og:image" content="https://svjewelsshop.com/wp-content/uploads/2025/09/cartier1.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SV Jewels — Moissanite Watch">
+  <meta name="twitter:description" content="Premium moissanite iced-out watch. Free worldwide shipping.">
+  <meta name="twitter:image" content="https://svjewelsshop.com/wp-content/uploads/2025/09/cartier1.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="/" class="logo"><span class="logo-gem">◆</span>SV <span class="logo-accent">JEWELS</span></a>
+      <nav class="nav" id="nav">
+        <a href="/" class="nav-link" onclick="closeMenu()">Home</a>
+        <a href="/cartier" class="nav-link" onclick="closeMenu()">Cartier</a>
+        <a href="/ap" class="nav-link" onclick="closeMenu()">AP</a>
+        <a href="/rolex" class="nav-link" onclick="closeMenu()">Rolex</a>
+        <a href="/#contact" class="nav-link" onclick="closeMenu()">Contact</a>
+      </nav>
+      <button class="cart-btn" id="cartBtn" onclick="toggleCart()" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" id="cartBadge" style="display:none">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="productMain">
+
+    <section class="product-page">
+      <div class="product-page-inner">
+
+        <nav class="breadcrumb">
+          <a href="/">Home</a>
+          <span class="bc-sep">›</span>
+          <a href="/" id="bcBrand">Collection</a>
+          <span class="bc-sep">›</span>
+          <span id="bcTitle">Watch</span>
+        </nav>
+
+        <div class="product-layout">
+          <!-- Gallery -->
+          <div class="product-gallery">
+            <div class="gallery-main" id="galleryMain">
+              <img id="mainImage" src="" alt="">
+            </div>
+            <div class="gallery-thumbs" id="galleryThumbs"></div>
+          </div>
+
+          <!-- Info -->
+          <div class="product-info">
+            <p class="product-page-cat" id="productCat"></p>
+            <h1 class="product-page-title" id="productTitle"></h1>
+            <p class="product-page-price" id="productPrice"></p>
+            <hr class="product-divider">
+            <p class="product-page-desc" id="productDesc"></p>
+
+            <div class="product-page-actions">
+              <button class="btn-cart-lg" id="addToCartBtn">+ Add to Cart</button>
+              <button class="btn-gold btn-buy-lg" id="buyNowBtn">Buy Now →</button>
+            </div>
+
+            <div class="product-features">
+              <div class="feature"><span class="feature-gem">◆</span><span>Free international shipping</span></div>
+              <div class="feature"><span class="feature-gem">◆</span><span>VVS moissanite diamonds</span></div>
+              <div class="feature"><span class="feature-gem">◆</span><span>3–5 day delivery worldwide</span></div>
+              <div class="feature"><span class="feature-gem">◆</span><span>100% satisfaction guarantee</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Related products -->
+    <section class="related-section" id="relatedSection">
+      <div class="related-inner">
+        <h2 class="section-title">You May Also Like</h2>
+        <div class="products-grid" id="relatedGrid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo"><span class="logo-gem">◆</span> SV JEWELS</p>
+      <p class="footer-sub">Premium moissanite timepieces. Free shipping on all orders.</p>
+      <p class="footer-copy">© 2025 SV Jewels. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/products-data.js"></script>
+  <script src="/shared.js"></script>
+  <script src="/product.js"></script>
+</body>
+</html>

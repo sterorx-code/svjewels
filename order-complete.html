@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Order Confirmed — SV Jewels</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="https://sc04.alicdn.com/kf/A8a62767f64824e94b5a9ad77dec2e87az.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="https://sc04.alicdn.com/kf/A8a62767f64824e94b5a9ad77dec2e87az.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="/" class="logo"><span class="logo-gem">◆</span>SV <span class="logo-accent">JEWELS</span></a>
+      <nav class="nav" id="nav">
+        <a href="/" class="nav-link" onclick="closeMenu()">Home</a>
+        <a href="/#shop" class="nav-link" onclick="closeMenu()">Shop</a>
+        <a href="/#about" class="nav-link" onclick="closeMenu()">About</a>
+        <a href="/#contact" class="nav-link" onclick="closeMenu()">Contact</a>
+      </nav>
+      <button class="cart-btn" id="cartBtn" onclick="toggleCart()" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" id="cartBadge" style="display:none">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="order-complete-section" id="orderCompleteSection">
+      <div class="order-complete-inner">
+        <!-- populated by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo"><span class="logo-gem">◆</span> SV JEWELS</p>
+      <p class="footer-sub">Premium moissanite timepieces. Free shipping on all orders.</p>
+      <p class="footer-copy">© 2025 SV Jewels. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/products-data.js"></script>
+  <script src="/shared.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const status = params.get('status') || params.get('checkout_status');
+      const inner = document.querySelector('.order-complete-inner');
+      const isSuccess = status === 'success' || status === 'complete' || status === 'paid';
+
+      if (isSuccess) {
+        inner.innerHTML = `
+          <span class="oc-gem">◆</span>
+          <h1 class="oc-title">Payment Confirmed</h1>
+          <p class="oc-body">Thank you for your order. We'll reach out within 24 hours with tracking details.</p>
+          <a href="/" class="btn-gold" style="display:inline-block;margin-top:2rem">Continue Shopping</a>`;
+      } else if (status === 'cancel' || status === 'cancelled' || status === 'error') {
+        inner.innerHTML = `
+          <span class="oc-gem" style="color:#888">◆</span>
+          <h1 class="oc-title">Payment Cancelled</h1>
+          <p class="oc-body">Your payment was not completed. No charges were made.</p>
+          <a href="/" class="btn-gold" style="display:inline-block;margin-top:2rem">Return to Shop</a>`;
+      } else {
+        inner.innerHTML = `
+          <span class="oc-gem">◆</span>
+          <h1 class="oc-title">Order Received</h1>
+          <p class="oc-body">Your order has been placed. We'll reach out within 24 hours to confirm.</p>
+          <a href="/" class="btn-gold" style="display:inline-block;margin-top:2rem">Continue Shopping</a>`;
+      }
+    })();
+  </script>
+</body>
+</html>
