@@ -164,6 +164,10 @@ function renderProductPage() {
     mainWrap.insertAdjacentHTML('beforeend', '<span style="color:var(--gold);font-size:3rem">◆</span>');
   }
 
+  // Shipping
+  document.getElementById('shippingFeature').textContent =
+    p.id === 38 ? 'Next day shipping in US' : '10 business day shipping';
+
   // Buttons
   document.getElementById('addToCartBtn').onclick = () => addToCart(p.id);
   document.getElementById('buyNowBtn').onclick = () => openCheckout(p.id);

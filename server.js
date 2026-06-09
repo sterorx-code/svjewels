@@ -37,7 +37,10 @@ app.get('/cartier', (req, res) => res.sendFile(path.join(__dirname, 'collection.
 app.get('/ap',      (req, res) => res.sendFile(path.join(__dirname, 'collection.html')));
 app.get('/rolex',   (req, res) => res.sendFile(path.join(__dirname, 'collection.html')));
 
-app.get('/reviews', (req, res) => res.sendFile(path.join(__dirname, 'reviews.html')));
+app.get('/reviews',         (req, res) => res.sendFile(path.join(__dirname, 'reviews.html')));
+app.get('/shipping-policy', (req, res) => res.sendFile(path.join(__dirname, 'shipping-policy.html')));
+app.get('/privacy-policy',  (req, res) => res.sendFile(path.join(__dirname, 'privacy-policy.html')));
+app.get('/terms',           (req, res) => res.sendFile(path.join(__dirname, 'terms.html')));
 
 app.get('/order-complete', (req, res) => {
   res.sendFile(path.join(__dirname, 'order-complete.html'));

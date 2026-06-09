@@ -674,6 +674,24 @@ body {
   color: var(--gray);
 }
 
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.25rem 0;
+}
+
+.footer-links a {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
 .footer-copy {
   font-size: 0.7rem;
   color: var(--border-hi);
@@ -1708,3 +1726,65 @@ video.review-media { max-height: 220px; background: #000; }
   color: var(--gray);
   letter-spacing: 0.05em;
 }
+
+/* ─── POLICY PAGES ───────────────────────────── */
+.policy-page {
+  padding: 8rem 2rem 6rem;
+}
+
+.policy-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.policy-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin: 0.5rem 0 0.4rem;
+  line-height: 1.1;
+}
+
+.policy-updated {
+  font-size: 0.75rem;
+  color: var(--gray);
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+}
+
+.policy-body h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.policy-body p {
+  font-size: 0.88rem;
+  color: var(--gray-light);
+  line-height: 1.85;
+  margin-bottom: 0.75rem;
+}
+
+.policy-body ul {
+  margin: 0.5rem 0 0.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.policy-body li {
+  font-size: 0.88rem;
+  color: var(--gray-light);
+  line-height: 1.75;
+}
+
+.policy-body a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.policy-body a:hover { text-decoration: underline; }

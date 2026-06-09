@@ -9,26 +9,13 @@
     gtag('js', new Date());
     gtag('config', 'AW-17672408280');
   </script>
-  <!-- Event snippet for Purchase conversion page -->
-  <script>
-    if (new URLSearchParams(window.location.search).get('status') === 'paid') {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17672408280/I3WcCL_OiLwcENiZ7upB',
-        'transaction_id': ''
-      });
-    }
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Order Confirmed — SV Jewels</title>
-  <meta name="robots" content="noindex, nofollow">
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico">
+  <title>Shipping Policy — SV Jewels</title>
+  <meta name="description" content="SV Jewels shipping policy. Free worldwide shipping on all moissanite watches.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://svvjewels.shop/shipping-policy">
   <link rel="icon" href="https://sc04.alicdn.com/kf/A8a62767f64824e94b5a9ad77dec2e87az.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="https://sc04.alicdn.com/kf/A8a62767f64824e94b5a9ad77dec2e87az.jpeg">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
@@ -60,9 +47,41 @@
   </header>
 
   <main>
-    <section class="order-complete-section" id="orderCompleteSection">
-      <div class="order-complete-inner">
-        <!-- populated by JS -->
+    <section class="policy-page">
+      <div class="policy-inner">
+        <p class="eyebrow">SV Jewels</p>
+        <h1 class="policy-title">Shipping Policy</h1>
+        <p class="policy-updated">Last updated: June 2025</p>
+
+        <div class="policy-body">
+
+          <h2>Processing Time</h2>
+          <p>All orders are processed within 1–2 business days of payment confirmation. Orders placed on weekends or public holidays will be processed on the next business day.</p>
+
+          <h2>Shipping Times</h2>
+          <p>We offer free shipping on every order worldwide. Estimated delivery times are as follows:</p>
+          <ul>
+            <li><strong>Two-Tone Cartier Santos (Flash Sale):</strong> Next business day delivery within the United States.</li>
+            <li><strong>All other watches:</strong> 10 business days — domestic US and international.</li>
+          </ul>
+          <p>Business days are Monday through Friday, excluding US federal holidays. Delivery times are estimates and may vary due to carrier delays, customs processing, or events outside our control.</p>
+
+          <h2>Free International Shipping</h2>
+          <p>All orders ship free worldwide. No minimum purchase required. International orders may be subject to customs duties or import taxes imposed by the destination country. These charges are the responsibility of the recipient and are not included in the purchase price.</p>
+
+          <h2>Order Tracking</h2>
+          <p>Once your order ships, you will receive a confirmation email with tracking information. Please allow up to 24 hours for tracking details to update after shipment.</p>
+
+          <h2>Lost or Damaged Packages</h2>
+          <p>If your package is lost in transit or arrives damaged, please contact us at <a href="mailto:sterorx@gmail.com">sterorx@gmail.com</a> within 7 days of the expected delivery date. We will work with the carrier to resolve the issue promptly.</p>
+
+          <h2>Address Accuracy</h2>
+          <p>Please ensure your shipping address is correct at checkout. SV Jewels is not responsible for orders delivered to an incorrect address provided by the customer.</p>
+
+          <h2>Contact Us</h2>
+          <p>For shipping inquiries, email us at <a href="mailto:sterorx@gmail.com">sterorx@gmail.com</a>.</p>
+
+        </div>
       </div>
     </section>
   </main>
@@ -82,33 +101,5 @@
 
   <script src="/products-data.js"></script>
   <script src="/shared.js"></script>
-  <script>
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      const status = params.get('status') || params.get('checkout_status');
-      const inner = document.querySelector('.order-complete-inner');
-      const isSuccess = status === 'success' || status === 'complete' || status === 'paid';
-
-      if (isSuccess) {
-        inner.innerHTML = `
-          <span class="oc-gem">◆</span>
-          <h1 class="oc-title">Payment Confirmed</h1>
-          <p class="oc-body">Thank you for your order. We'll reach out within 24 hours with tracking details.</p>
-          <a href="/" class="btn-gold" style="display:inline-block;margin-top:2rem">Continue Shopping</a>`;
-      } else if (status === 'cancel' || status === 'cancelled' || status === 'error') {
-        inner.innerHTML = `
-          <span class="oc-gem" style="color:#888">◆</span>
-          <h1 class="oc-title">Payment Cancelled</h1>
-          <p class="oc-body">Your payment was not completed. No charges were made.</p>
-          <a href="/" class="btn-gold" style="display:inline-block;margin-top:2rem">Return to Shop</a>`;
-      } else {
-        inner.innerHTML = `
-          <span class="oc-gem">◆</span>
-          <h1 class="oc-title">Order Received</h1>
-          <p class="oc-body">Your order has been placed. We'll reach out within 24 hours to confirm.</p>
-          <a href="/" class="btn-gold" style="display:inline-block;margin-top:2rem">Continue Shopping</a>`;
-      }
-    })();
-  </script>
 </body>
 </html>
