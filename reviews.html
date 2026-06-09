@@ -4,28 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Title, description, canonical and OG tags are set dynamically by collection.js -->
-  <title>SV Jewels — Moissanite Collection</title>
-  <meta name="description" content="Premium moissanite iced-out watches from SV Jewels. VVS brilliance, free worldwide shipping.">
+  <title>Customer Reviews — SV Jewels Moissanite Watches</title>
+  <meta name="description" content="Read verified customer reviews for SV Jewels moissanite iced-out watches. Real photos and videos from real buyers.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="SV Jewels">
+  <link rel="canonical" href="https://svvjewels.shop/reviews">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="https://sc04.alicdn.com/kf/A8a62767f64824e94b5a9ad77dec2e87az.jpeg" type="image/jpeg">
   <link rel="apple-touch-icon" href="https://sc04.alicdn.com/kf/A8a62767f64824e94b5a9ad77dec2e87az.jpeg">
 
-  <!-- Open Graph (overridden by collection.js) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SV Jewels">
-  <meta property="og:title" content="SV Jewels — Moissanite Collection">
-  <meta property="og:description" content="Premium moissanite iced-out watches. VVS brilliance, free shipping.">
+  <meta property="og:title" content="Customer Reviews — SV Jewels">
+  <meta property="og:description" content="Verified reviews with real photos and videos from SV Jewels customers.">
+  <meta property="og:url" content="https://svvjewels.shop/reviews">
   <meta property="og:image" content="https://svjewelsshop.com/wp-content/uploads/2025/09/cartier1.webp">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SV Jewels — Moissanite Collection">
-  <meta name="twitter:description" content="Premium moissanite iced-out watches. Free worldwide shipping.">
+  <meta name="twitter:title" content="Customer Reviews — SV Jewels">
+  <meta name="twitter:description" content="Verified reviews with real photos and videos.">
   <meta name="twitter:image" content="https://svjewelsshop.com/wp-content/uploads/2025/09/cartier1.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +44,7 @@
         <a href="/cartier" class="nav-link" onclick="closeMenu()">Cartier</a>
         <a href="/ap" class="nav-link" onclick="closeMenu()">AP</a>
         <a href="/rolex" class="nav-link" onclick="closeMenu()">Rolex</a>
-        <a href="/reviews" class="nav-link" onclick="closeMenu()">Reviews</a>
+        <a href="/reviews" class="nav-link active" onclick="closeMenu()">Reviews</a>
         <a href="/#contact" class="nav-link" onclick="closeMenu()">Contact</a>
       </nav>
       <button class="cart-btn" id="cartBtn" onclick="toggleCart()" aria-label="Cart">
@@ -59,17 +60,23 @@
   </header>
 
   <main>
-    <section class="collection-page" id="collectionSection">
-      <div class="collection-hero">
-        <p class="eyebrow" id="collectionEyebrow">Collection</p>
-        <h1 class="collection-title" id="collectionTitle"></h1>
-        <p class="collection-sub" id="collectionSub"></p>
-      </div>
-      <div class="shop" style="padding-top:0">
-        <div class="shop-top" style="padding-top:0;border-top:none">
-          <div class="filter-bar" id="filterBar"></div>
+    <section class="reviews-page">
+      <div class="reviews-page-inner">
+
+        <div class="reviews-page-hero">
+          <p class="eyebrow">Verified Buyers</p>
+          <h1 class="reviews-page-title">Customer Reviews</h1>
+          <div class="reviews-page-avg">
+            <span class="reviews-page-avg-num">5.0</span>
+            <div>
+              <div class="reviews-page-avg-stars">★★★★★</div>
+              <p class="reviews-page-avg-label">From verified customers</p>
+            </div>
+          </div>
         </div>
-        <div class="products-grid" id="productsGrid"></div>
+
+        <div class="reviews-list" id="reviewsListAll"></div>
+
       </div>
     </section>
   </main>
@@ -82,8 +89,8 @@
     </div>
   </footer>
 
-  <script src="/products-data.js"></script>
+  <script src="/reviews-data.js"></script>
   <script src="/shared.js"></script>
-  <script src="/collection.js"></script>
+  <script src="/reviews.js"></script>
 </body>
 </html>

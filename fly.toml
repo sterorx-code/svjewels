@@ -1,4 +1,4 @@
-app = 'sv-jewels'
+app = 'svjewels'
 primary_region = 'ord'
 
 [build]

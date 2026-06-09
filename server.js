@@ -37,6 +37,8 @@ app.get('/cartier', (req, res) => res.sendFile(path.join(__dirname, 'collection.
 app.get('/ap',      (req, res) => res.sendFile(path.join(__dirname, 'collection.html')));
 app.get('/rolex',   (req, res) => res.sendFile(path.join(__dirname, 'collection.html')));
 
+app.get('/reviews', (req, res) => res.sendFile(path.join(__dirname, 'reviews.html')));
+
 app.get('/order-complete', (req, res) => {
   res.sendFile(path.join(__dirname, 'order-complete.html'));
 });
@@ -50,6 +52,7 @@ app.get('/sitemap.xml', (req, res) => {
     { loc: `${base}/cartier`, priority: '0.9', changefreq: 'weekly' },
     { loc: `${base}/ap`,      priority: '0.9', changefreq: 'weekly' },
     { loc: `${base}/rolex`,   priority: '0.9', changefreq: 'weekly' },
+    { loc: `${base}/reviews`, priority: '0.8', changefreq: 'weekly' },
   ];
   const productIds = Array.from({ length: 39 }, (_, i) => i + 1);
   const productUrls = productIds.map(id => ({
