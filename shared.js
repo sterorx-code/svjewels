@@ -144,7 +144,7 @@ function closeCartCheckout() {
 
 function _showCartWhopEmbed(planId, sessionId) {
   document.getElementById('ccFormWrap').style.display = 'none';
-  const returnUrl = window.location.origin + '/order-complete';
+  const returnUrl = window.location.origin + '/order-complete?status=paid';
   const sessionAttr = sessionId ? '\n    data-whop-checkout-session="' + sessionId + '"' : '';
   document.getElementById('ccWhopEmbed').innerHTML =
     '<div\n    data-whop-checkout-plan-id="' + planId + '"' + sessionAttr +
@@ -217,7 +217,7 @@ function closeCheckout() {
 
 function _showWhopEmbed(planId) {
   document.getElementById('coFormWrap').style.display = 'none';
-  const returnUrl = window.location.origin + '/order-complete';
+  const returnUrl = window.location.origin + '/order-complete?status=paid';
   document.getElementById('coWhopEmbed').innerHTML =
     '<div\n    data-whop-checkout-plan-id="' + planId + '"' +
     '\n    data-whop-checkout-return-url="' + returnUrl + '"' +

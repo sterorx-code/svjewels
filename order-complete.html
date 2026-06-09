@@ -22,7 +22,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -32,8 +32,10 @@
       <a href="/" class="logo"><span class="logo-gem">◆</span>SV <span class="logo-accent">JEWELS</span></a>
       <nav class="nav" id="nav">
         <a href="/" class="nav-link" onclick="closeMenu()">Home</a>
-        <a href="/#shop" class="nav-link" onclick="closeMenu()">Shop</a>
-        <a href="/#about" class="nav-link" onclick="closeMenu()">About</a>
+        <a href="/cartier" class="nav-link" onclick="closeMenu()">Cartier</a>
+        <a href="/ap" class="nav-link" onclick="closeMenu()">AP</a>
+        <a href="/rolex" class="nav-link" onclick="closeMenu()">Rolex</a>
+        <a href="/reviews" class="nav-link" onclick="closeMenu()">Reviews</a>
         <a href="/#contact" class="nav-link" onclick="closeMenu()">Contact</a>
       </nav>
       <button class="cart-btn" id="cartBtn" onclick="toggleCart()" aria-label="Cart">
@@ -74,6 +76,10 @@
       const isSuccess = status === 'success' || status === 'complete' || status === 'paid';
 
       if (isSuccess) {
+        // Fire Google Ads purchase conversion
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', { send_to: 'AW-17672408280' });
+        }
         inner.innerHTML = `
           <span class="oc-gem">◆</span>
           <h1 class="oc-title">Payment Confirmed</h1>
