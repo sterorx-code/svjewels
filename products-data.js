@@ -370,6 +370,16 @@ window.PRODUCTS = [
     images: ["https://svjewelsshop.com/wp-content/uploads/2025/09/Snapinsta.app_1080_307278679_835364667845186_5218952479415609042_n.webp"],
     description: "42mm Yacht-Master with Oysterflex bracelet. Swiss automatic sporting luxury set with brilliant moissanite."
   },
+  // ── Test Product ─────────────────────────────────────────────────
+  {
+    id: 39, brand: "cartier", category: "Moissanite Cartier Santos",
+    title: "Test Payment — $1 Demo Item",
+    price: "$1.00",
+    whopPlanId: "plan_TEST_REPLACE_ME",
+    image: "/images/1.png",
+    images: ["/images/1.png"],
+    description: "Test item for payment verification. Do not purchase."
+  },
   // ── Flash Sale ────────────────────────────────────────────────────
   {
     id: 38, brand: "cartier", category: "Moissanite Cartier Santos",

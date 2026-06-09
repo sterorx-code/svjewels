@@ -51,7 +51,7 @@ app.get('/sitemap.xml', (req, res) => {
     { loc: `${base}/ap`,      priority: '0.9', changefreq: 'weekly' },
     { loc: `${base}/rolex`,   priority: '0.9', changefreq: 'weekly' },
   ];
-  const productIds = Array.from({ length: 38 }, (_, i) => i + 1);
+  const productIds = Array.from({ length: 39 }, (_, i) => i + 1);
   const productUrls = productIds.map(id => ({
     loc: `${base}/product/${id}`, priority: '0.7', changefreq: 'monthly',
   }));
